@@ -3,7 +3,7 @@ type Key = string
 type Keys = Array<Key>
 
 type JSObject = {
-  [key: string | number]: unknown
+  [key: string | symbol]: unknown
 }
 
 /**
