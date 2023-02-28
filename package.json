@@ -1,5 +1,5 @@
 {
-  "name": "json-keys",
+  "name": "json-object-keys",
   "version": "0.1.0",
   "description": "",
   "author": {
@@ -15,7 +15,7 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/joaopaulomoraes/json-keys/issues",
+    "url": "https://github.com/joaopaulomoraes/json-object-keys/issues",
     "email": "joaopaulomoraes@outlook.com"
   },
   "main": "dist/index.js",
