@@ -7,7 +7,7 @@ export default {
   testPathIgnorePatterns: ['/dist/', '/node_modules/'],
   globals: {
     'ts-jest': {
-      isolatedModules: true,
-    },
+      isolatedModules: true
+    }
   }
 }
