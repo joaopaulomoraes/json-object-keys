@@ -12,10 +12,7 @@ type JSObject = {
  * @param keys - A single key or an array of keys
  * @returns A new object without the given keys
  */
-export default function remove<T extends JSObject>(
-  object: T,
-  keys: Key | Keys
-): T {
+export function remove<T extends JSObject>(object: T, keys: Key | Keys): T {
   if (typeof keys === 'string') {
     return withString(object, keys)
   }

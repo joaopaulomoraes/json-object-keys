@@ -1,4 +1,4 @@
-import remove from '.'
+import { remove } from '.'
 
 describe('remove', () => {
   it('should remove a specific key', () => {
