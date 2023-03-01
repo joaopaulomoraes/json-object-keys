@@ -32,9 +32,7 @@ describe('remove', () => {
   })
 
   it('should remove multiple keys', () => {
-    expect(
-      remove({ id: 1, foo: 2, bar: 3, baz: [] }, ['foo', 'bar'])
-    ).toStrictEqual({ baz: [], id: 1 })
+    expect(remove({ id: 1, foo: 2, bar: 3, baz: [] }, ['foo', 'bar'])).toStrictEqual({ baz: [], id: 1 })
   })
 })
 
