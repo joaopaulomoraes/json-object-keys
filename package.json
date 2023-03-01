@@ -14,13 +14,18 @@
       "url": "https://github.com/fabioramos12"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaopaulomoraes/json-object-keys.git"
+  },
   "bugs": {
     "url": "https://github.com/joaopaulomoraes/json-object-keys/issues",
     "email": "joaopaulomoraes@outlook.com"
   },
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "engines": {
-    "node": "18.x"
+    "node": ">=16"
   },
   "scripts": {
     "lint": "eslint src --max-warnings=0",
@@ -50,5 +55,8 @@
     "tsc-alias": "^1.8.2",
     "tsx": "^3.12.3",
     "typescript": "^4.9.5"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }

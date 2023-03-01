@@ -1,17 +1,19 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "commonjs",
+    "module": "es2020",
     "rootDir": "src",
     "baseUrl": "src",
     "allowJs": true,
     "outDir": "dist",
+    "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "moduleResolution": "node",
     "strictNullChecks": true,
-    "isolatedModules": false
+    "isolatedModules": true
   },
-  "exclude": ["node_modules", "dist"],
-  "include": ["src"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
