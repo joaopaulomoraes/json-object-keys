@@ -22,8 +22,8 @@
     "url": "https://github.com/joaopaulomoraes/json-object-keys/issues",
     "email": "joaopaulomoraes@outlook.com"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "engines": {
     "node": ">=16"
   },
