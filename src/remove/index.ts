@@ -14,18 +14,18 @@ type JSObject = {
  */
 export function remove<T extends JSObject>(object: T, keys: Key | Keys): T {
   if (typeof keys === 'string') {
-    return withString(object, keys)
+    return withoutKey(object, keys)
   }
 
-  return withArray(object, keys)
+  return withoutKeys(object, keys)
 }
 
-function withString(object: JSObject, key: Key) {
+function withoutKey(object: JSObject, key: Key) {
   const regex = new RegExp(`"${key}":[^,}]+,?`, 'g')
   return withRegex(object, regex)
 }
 
-function withArray(object: JSObject, keys: Keys) {
+function withoutKeys(object: JSObject, keys: Keys) {
   const regex = new RegExp(`"(${keys.join('|')})":[^,}]+,?`, 'g')
   return withRegex(object, regex)
 }
