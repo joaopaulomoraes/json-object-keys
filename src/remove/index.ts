@@ -1,9 +1,5 @@
-type Key = string
-
-type Keys = Array<Key>
-
 type JSObject = {
-  [key: string | symbol]: unknown
+  [key: string | number | symbol]: unknown
 }
 
 /**
@@ -12,20 +8,20 @@ type JSObject = {
  * @param keys - A single key or an array of keys
  * @returns A new object without the given keys
  */
-export function remove<T extends JSObject>(object: T, keys: Key | Keys): T {
-  if (typeof keys === 'string') {
-    return withoutKey(object, keys)
-  }
+export function remove<O extends JSObject, K extends keyof O>(object: O, keys: K | K[]): Omit<O, K> {
+  if (typeof keys === 'string') return withoutKey(object, keys)
 
-  return withoutKeys(object, keys)
+  if (typeof keys === 'object') return withoutKeys(object, keys)
+
+  return object
 }
 
-function withoutKey(object: JSObject, key: Key) {
+function withoutKey<O extends JSObject, K extends string>(object: O, key: K) {
   const regex = new RegExp(`"${key}":[^,}]+,?`, 'g')
   return withRegex(object, regex)
 }
 
-function withoutKeys(object: JSObject, keys: Keys) {
+function withoutKeys<O extends JSObject, K extends keyof O>(object: O, keys: K[]) {
   const regex = new RegExp(`"(${keys.join('|')})":[^,}]+,?`, 'g')
   return withRegex(object, regex)
 }
