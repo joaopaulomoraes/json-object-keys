@@ -5,5 +5,5 @@ export default {
   testEnvironment: 'node',
   modulePaths: ['<rootDir>/src/'],
   collectCoverageFrom: ['src/**/*.ts'],
-  testPathIgnorePatterns: ['/dist/', '/node_modules/']
+  testPathIgnorePatterns: ['/build/', '/node_modules/']
 }
