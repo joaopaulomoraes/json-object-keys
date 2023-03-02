@@ -1,7 +1,7 @@
 {
   "name": "json-object-keys",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.1.0-dev",
+  "description": "Manage complex object keys in depth",
   "author": {
     "name": "João Paulo Moraes",
     "email": "joaopaulomoraes@outlook.com",
@@ -37,7 +37,14 @@
     "test:watch": "jest --watch --maxWorkers=25%",
     "test:ci": "jest --runInBand"
   },
-  "keywords": [],
+  "keywords": [
+    "json",
+    "objects",
+    "keys",
+    "values",
+    "remove",
+    "replace"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@babel/preset-typescript": "^7.21.0",
