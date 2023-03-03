@@ -153,29 +153,29 @@ Details
 
 ```diff
 +{
-- uuid: 'a78e3a45-3b3c-4f5d-85d6-9e6e1b2dcb45',
+-  uuid: 'a78e3a45-3b3c-4f5d-85d6-9e6e1b2dcb45',
 +  name: 'Large Object',
 +  children: [
 +    {
--     uuid: 'c828d77d-aa2c-4af6-a4a6-4d4bbd7f8bf5',
+-      uuid: 'c828d77d-aa2c-4af6-a4a6-4d4bbd7f8bf5',
 +      name: 'Child 1',
 +      children: [
 +        {
--         uuid: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+-          uuid: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
 +          name: 'Child 1',
 +          children: [
 +            {
--             uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+-              uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
 +              name: 'Great Child 1'
 +            },
 +            {
--             uuid: 'c579a0b8-c2c7-44e2-a7d9-2edba8f7b472',
+-              uuid: 'c579a0b8-c2c7-44e2-a7d9-2edba8f7b472',
 +              name: 'Great Child 2'
 +            }
 +          ]
 +        },
 +        {
--         uuid: 'a3a7aee0-bfe6-47f6-8d90-a7e2c2fc1e35',
+-          uuid: 'a3a7aee0-bfe6-47f6-8d90-a7e2c2fc1e35',
 +          name: 'Child 2'
 +        }
 +      ]
