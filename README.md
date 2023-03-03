@@ -4,6 +4,16 @@
 
 Manage complex object keys in depth.
 
+## Table of contents
+
+- [json-object-keys | ⚠️ WIP ⚠️](#json-object-keys--️-wip-️)
+  - [Table of contents](#table-of-contents)
+  - [Install](#install)
+  - [Quickstart](#quickstart)
+    - [Remove an unique key](#remove-an-unique-key)
+    - [Remove multiple keys](#remove-multiple-keys)
+  - [License](#license)
+
 ## Install
 
 ```sh
@@ -12,7 +22,7 @@ npm install json-object-keys
 
 ## Quickstart
 
-### Remove a unique key
+### Remove an unique key
 
 ```ts
 import { remove } from 'json-object-keys'
