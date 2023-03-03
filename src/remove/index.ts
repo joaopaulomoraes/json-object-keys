@@ -17,12 +17,13 @@ export function remove<O extends JSObject, K extends keyof O>(object: O, keys: K
 }
 
 function withoutKey<O extends JSObject, K extends string>(object: O, key: K) {
-  const regex = new RegExp(`"${key}":[^,}]+,?`, 'g')
+  const regex = new RegExp(`"${key}":[^,}]+,?|,?"${key}":[^,}]+`, 'g')
   return withRegex(object, regex)
 }
 
 function withoutKeys<O extends JSObject, K extends keyof O>(object: O, keys: K[]) {
-  const regex = new RegExp(`"(${keys.join('|')})":[^,}]+,?`, 'g')
+  const params = keys.join('|')
+  const regex = new RegExp(`"(${params})":[^,}]+,?|,?"(${params})":[^,}]+`, 'g')
   return withRegex(object, regex)
 }
 
