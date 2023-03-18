@@ -141,7 +141,7 @@ describe('remove', () => {
     })
   })
 
-  it('should remove id and node from userNodes', () => {
+  it('should remove email, category and age from userNodes', () => {
     expect(remove(userNodes, ['email', 'category', 'age'])).toStrictEqual({
       id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
       name: 'John Doe',
