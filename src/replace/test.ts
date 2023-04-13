@@ -1,7 +1,7 @@
 import { replace } from '.'
 
 describe('replace', () => {
-  it('should replace foo with baz', () => {
+  it('should replace foo with bar', () => {
     expect(replace({ id: 1, foo: 2, baz: 3 }, { foo: 'bar' })).toStrictEqual({ id: 1, bar: 2, baz: 3 })
   })
 
