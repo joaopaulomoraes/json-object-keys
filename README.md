@@ -9,9 +9,10 @@ Manage complex object keys in depth.
 - [json-object-keys | ⚠️ WIP ⚠️](#json-object-keys--️-wip-️)
   - [Table of contents](#table-of-contents)
   - [Install](#install)
-  - [Quickstart](#quickstart)
+  - [Remove](#remove)
     - [Remove an unique key](#remove-an-unique-key)
     - [Remove multiple keys](#remove-multiple-keys)
+  - [Replace](#replace)
   - [License](#license)
 
 ## Install
@@ -20,7 +21,7 @@ Manage complex object keys in depth.
 npm install json-object-keys
 ```
 
-## Quickstart
+## Remove
 
 ### Remove an unique key
 
@@ -79,6 +80,24 @@ Output
 -  email: 'john@doe.com',
 +  age: 29
 +}
+```
+
+## Replace
+
+```ts
+import { replace } from 'json-object-keys'
+
+replace({ id: 1, foo: 2, baz: 3 }, { foo: 'bar' })
+```
+
+Output
+
+```diff
+{
+  id: 1,
++ bar: 2,
+  baz: 3
+}
 ```
 
 ## License
