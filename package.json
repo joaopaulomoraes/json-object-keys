@@ -1,6 +1,6 @@
 {
   "name": "json-object-keys",
-  "version": "0.1.8",
+  "version": "0.1.7",
   "description": "Manage complex object keys in depth",
   "author": {
     "name": "João Paulo Moraes",
@@ -12,6 +12,11 @@
       "name": "Fabio Ramos",
       "email": "fabioalvesramos12@gmail.com",
       "url": "https://github.com/fabioramos12"
+    },
+    {
+      "name": "Filipe Boechat",
+      "email": "filipeboechatsampaio@hotmail.com",
+      "url": "https://github.com/fboechats"
     }
   ],
   "repository": {
