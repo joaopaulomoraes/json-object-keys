@@ -2,7 +2,7 @@ name: Publish to npmjs
 
 on:
   release:
-    types: [published]
+    types: [created]
 
 jobs:
   build:
@@ -19,3 +19,4 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+  
