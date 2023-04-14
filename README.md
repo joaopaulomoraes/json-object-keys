@@ -13,6 +13,8 @@ Manage complex object keys in depth.
     - [Remove an unique key](#remove-an-unique-key)
     - [Remove multiple keys](#remove-multiple-keys)
   - [Replace](#replace)
+    - [Replace an unique key](#replace-an-unique-key)
+    - [Replace multiple keys](#replace-multiple-keys)
   - [License](#license)
 
 ## Install
@@ -84,6 +86,8 @@ Output
 
 ## Replace
 
+### Replace an unique key
+
 ```ts
 import { replace } from 'json-object-keys'
 
@@ -98,6 +102,47 @@ Output
 + bar: 2,
   baz: 3
 }
+```
+
+### Replace multiple keys
+
+```ts
+import { replace } from 'json-object-keys'
+
+replace(
+  {
+    uuid: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+    name: 'Grandchild 1',
+    children: [
+      {
+        uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+        name: 'Great Grandchild 1'
+      },
+      {
+        uuid: 'c579a0b8-c2c7-44e2-a7d9-2edba8f7b472',
+        name: 'Great Grandchild 2'
+      }
+    ]
+  }, { uuid: 'id', children: 'node' })
+```
+
+Output
+
+```diff
+ {
++   id: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+    name: 'Grandchild 1',
++   node: [
+      {
++       id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+        name: 'Great Grandchild 1'
+      },
+      {
++       id: 'c579a0b8-c2c7-44e2-a7d9-2edba8f7b472',
+        name: 'Great Grandchild 2'
+      }
+    ]
+  }
 ```
 
 ## License
