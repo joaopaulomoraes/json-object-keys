@@ -9,9 +9,12 @@ Manage complex object keys in depth.
 - [json-object-keys | ⚠️ WIP ⚠️](#json-object-keys--️-wip-️)
   - [Table of contents](#table-of-contents)
   - [Install](#install)
-  - [Quickstart](#quickstart)
+  - [Remove](#remove)
     - [Remove an unique key](#remove-an-unique-key)
     - [Remove multiple keys](#remove-multiple-keys)
+  - [Replace](#replace)
+    - [Replace an unique key](#replace-an-unique-key)
+    - [Replace multiple keys](#replace-multiple-keys)
   - [License](#license)
 
 ## Install
@@ -20,7 +23,7 @@ Manage complex object keys in depth.
 npm install json-object-keys
 ```
 
-## Quickstart
+## Remove
 
 ### Remove an unique key
 
@@ -33,7 +36,8 @@ remove(
     name: 'John Doe',
     category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
     email: 'john@doe.com',
-    age: 29
+    age: 29,
+    ...
   },
   'category'
 )
@@ -48,149 +52,6 @@ Output
 -  category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
 +  email: 'john@doe.com',
 +  age: 29
-+}
-```
-
-```ts
-import { remove } from 'json-object-keys'
-
-remove(
-  {
-    id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-    name: 'John Doe',
-    category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-    email: 'john@doe.com',
-    age: 29,
-    node: [
-      {
-        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-        name: 'John Doe',
-        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-        email: 'john@doe.com',
-        age: 29,
-        node: {
-          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-          name: 'John Doe',
-          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-          email: 'john@doe.com',
-          age: 29,
-          node: {
-            id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-            name: 'John Doe',
-            category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-            email: 'john@doe.com',
-            age: 29
-          }
-        }
-      },
-      {
-        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-        name: 'John Doe',
-        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-        email: 'john@doe.com',
-        age: 29,
-        node: {
-          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-          name: 'John Doe',
-          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-          email: 'john@doe.com',
-          age: 29
-        }
-      },
-      {
-        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-        name: 'John Doe',
-        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-        email: 'john@doe.com',
-        age: 29,
-        node: {
-          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-          name: 'John Doe',
-          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-          email: 'john@doe.com',
-          age: 29,
-          node: {
-            id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-            name: 'John Doe',
-            category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-            email: 'john@doe.com',
-            age: 29
-          }
-        }
-      }
-    ]
-  },
-  'id'
-)
-```
-
-Output
-
-```diff
-+{
--  id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+  name: 'John Doe',
-+  category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+  email: 'john@doe.com',
-+  age: 29,
-+  node: [
-+    {
--      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      name: 'John Doe',
-+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+      email: 'john@doe.com',
-+      age: 29,
-+      node: {
--        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        name: 'John Doe',
-+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+        email: 'john@doe.com',
-+        age: 29,
-+        node: {
--          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+          name: 'John Doe',
-+          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+          email: 'john@doe.com',
-+          age: 29
-+        }
-+      }
-+    },
-+    {
--      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      name: 'John Doe',
-+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+      email: 'john@doe.com',
-+      age: 29,
-+      node: {
--        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        name: 'John Doe',
-+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+        email: 'john@doe.com',
-+        age: 29
-+      }
-+    },
-+    {
--      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      name: 'John Doe',
-+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+      email: 'john@doe.com',
-+      age: 29,
-+      node: {
--        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        name: 'John Doe',
-+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+        email: 'john@doe.com',
-+        age: 29,
-+        node: {
--          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+          name: 'John Doe',
-+          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+          email: 'john@doe.com',
-+          age: 29
-+        }
-+      }
-+    }
-+  ]
 +}
 ```
 
@@ -223,147 +84,65 @@ Output
 +}
 ```
 
-```ts
-import { remove } from 'json-object-keys'
+## Replace
 
-remove(
-  {
-    id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-    name: 'John Doe',
-    category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-    email: 'john@doe.com',
-    age: 29,
-    node: [
-      {
-        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-        name: 'John Doe',
-        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-        email: 'john@doe.com',
-        age: 29,
-        node: {
-          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-          name: 'John Doe',
-          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-          email: 'john@doe.com',
-          age: 29,
-          node: {
-            id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-            name: 'John Doe',
-            category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-            email: 'john@doe.com',
-            age: 29
-          }
-        }
-      },
-      {
-        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-        name: 'John Doe',
-        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-        email: 'john@doe.com',
-        age: 29,
-        node: {
-          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-          name: 'John Doe',
-          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-          email: 'john@doe.com',
-          age: 29
-        }
-      },
-      {
-        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-        name: 'John Doe',
-        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-        email: 'john@doe.com',
-        age: 29,
-        node: {
-          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-          name: 'John Doe',
-          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-          email: 'john@doe.com',
-          age: 29,
-          node: {
-            id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-            name: 'John Doe',
-            category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-            email: 'john@doe.com',
-            age: 29
-          }
-        }
-      }
-    ]
-  },
-  ['email', 'category', 'age']
-)
+### Replace an unique key
+
+```ts
+import { replace } from 'json-object-keys'
+
+replace({ id: 1, foo: 2, baz: 3 }, { foo: 'bar' })
 ```
 
 Output
 
 ```diff
-+{
-+  id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+  name: 'John Doe',
--  category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--  email: 'john@doe.com',
--  age: 29,
-+  node: [
-+    {
-+      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      name: 'John Doe',
--      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--      email: 'john@doe.com',
--      age: 29,
-+      node: {
-+        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        name: 'John Doe',
--        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--        email: 'john@doe.com',
--        age: 29,
-+        node: {
-+          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+          name: 'John Doe',
--          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--          email: 'john@doe.com',
--          age: 29
-+        }
-+      }
-+    },
-+    {
-+      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      name: 'John Doe',
--      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--      email: 'john@doe.com',
--      age: 29,
-+      node: {
-+        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        name: 'John Doe',
--        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--        email: 'john@doe.com',
--        age: 29
-+      }
-+    },
-+    {
-+      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      name: 'John Doe',
--      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--      email: 'john@doe.com',
--      age: 29,
-+      node: {
-+        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        name: 'John Doe',
--        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--        email: 'john@doe.com',
--        age: 29,
-+        node: {
-+          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+          name: 'John Doe',
--          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--          email: 'john@doe.com',
--          age: 29
-+        }
-+      }
-+    }
-+  ]
-+}
+{
+  id: 1,
++ bar: 2,
+  baz: 3
+}
+```
+
+### Replace multiple keys
+
+```ts
+import { replace } from 'json-object-keys'
+
+replace(
+  {
+    uuid: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+    name: 'Grandchild 1',
+    children: [
+      {
+        uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+        name: 'Great Grandchild 1'
+      },
+      {
+        uuid: 'c579a0b8-c2c7-44e2-a7d9-2edba8f7b472',
+        name: 'Great Grandchild 2'
+      }
+    ]
+  }, { uuid: 'id', children: 'node' })
+```
+
+Output
+
+```diff
+ {
++   id: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+    name: 'Grandchild 1',
++   node: [
+      {
++       id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+        name: 'Great Grandchild 1'
+      },
+      {
++       id: 'c579a0b8-c2c7-44e2-a7d9-2edba8f7b472',
+        name: 'Great Grandchild 2'
+      }
+    ]
+  }
 ```
 
 ## License
