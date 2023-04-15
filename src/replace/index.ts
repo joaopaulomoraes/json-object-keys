@@ -6,6 +6,12 @@ type Replace<O extends JSObject, R extends Readonly<{ [T in keyof O]?: keyof O }
   [K in keyof O as K extends keyof R ? NonNullable<R[K]> : K]: O[K]
 }
 
+/**
+ * Replace a key or multiple keys from object
+ * @param object - An object
+ * @param keys - An object of keys
+ * @returns A new object replaced with the given keys
+ */
 export function replace<O extends JSObject, R extends Readonly<{ [K in keyof O]?: string }>>(
   object: O,
   replacement: R
