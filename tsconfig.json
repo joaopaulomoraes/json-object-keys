@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "es2020",
+    "module": "esnext",
     "rootDir": "src",
     "baseUrl": "src",
     "allowJs": true,
-    "outDir": "build",
+    "outDir": "build/esm",
     "declaration": true,
+    "declarationDir": "build/types",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
