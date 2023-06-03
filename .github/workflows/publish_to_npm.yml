@@ -14,9 +14,13 @@ jobs:
         with:
           node-version: 18.x
           registry-url: https://registry.npmjs.org
+
+      - name: Verify version
+        run: echo ${{ github.event.release.tag_name }}
+
+      - name: Setup NPM
+        run: echo "//registry.npmjs.org/:_authToken=\${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
       - run: npm ci
       - run: npm run build
       - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-  
