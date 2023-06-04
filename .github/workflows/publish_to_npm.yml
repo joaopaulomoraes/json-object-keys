@@ -21,4 +21,4 @@ jobs:
 
       - run: pnpm install
       - run: pnpm run build
-      - run: pnpm publish --access public --tag next
+      - run: pnpm publish --access public
