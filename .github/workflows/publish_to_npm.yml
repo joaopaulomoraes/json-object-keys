@@ -1,4 +1,4 @@
-name: Publish to npmjs
+name: Publish to NPM
 
 on:
   release:
@@ -19,6 +19,6 @@ jobs:
           node-version: 18.x
           cache: "pnpm"
 
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install
       - run: pnpm run build
-      - run: pnpm publish
+      - run: pnpm publish --access public --tag next
