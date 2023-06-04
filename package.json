@@ -1,6 +1,6 @@
 {
   "name": "json-object-keys",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "description": "Manage complex object keys in depth",
   "author": {
     "name": "João Paulo Moraes",
