@@ -23,9 +23,10 @@ jobs:
       - name: Verify version
         run: echo ${{ github.event.release.tag_name }}
 
-      - name: Setup NPM
-        run: echo "//registry.npmjs.org/:_authToken=\${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-
       - run: pnpm install
       - run: pnpm run build
-      - run: pnpm publish --access public --no-git-checks
+
+      - name: Publish to NPM
+        run: |
+          echo "//registry.npmjs.org/:_authToken=\${{ secrets.NPM_TOKEN }}" > .npmrc
+          pnpm publish --access public --no-git-checks
