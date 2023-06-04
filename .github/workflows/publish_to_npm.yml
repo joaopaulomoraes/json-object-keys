@@ -20,13 +20,13 @@ jobs:
           cache: "pnpm"
           registry-url: https://registry.npmjs.org
 
-      - name: Verify version
-        run: echo ${{ github.event.release.tag_name }}
+      - name: Setup PNPM
+        run: pnpm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
 
       - run: pnpm install
       - run: pnpm run build
 
       - name: Publish to NPM
-        run: |
-          echo "//registry.npmjs.org/:_authToken=\${{ secrets.NPM_TOKEN }}" > .npmrc
-          pnpm publish --access public --no-git-checks
+        run: pnpm publish --access public --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
