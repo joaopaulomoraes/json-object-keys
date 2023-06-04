@@ -7,21 +7,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - uses: actions/setup-node@v3
         with:
           node-version: 18.x
+          cache: "pnpm"
 
       - name: Install
-        run: npm install
+        run: pnpm install
 
       - name: Linting
-        run: npm run lint
+        run: pnpm run lint
 
       - name: Typecheck
-        run: npm run typecheck
+        run: pnpm run typecheck
 
       - name: Test
-        run: npm run test:ci
+        run: pnpm run test:ci
 
       - name: Build
-        run: npm run build
+        run: pnpm run build
