@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "rootDir": "src",
+    "baseUrl": "src",
+    "declaration": true,
+    "declarationDir": "build/types",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "moduleResolution": "bundler",
+    "isolatedModules": true,
+    "noEmit": false,
+    "moduleDetection": "force",
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "build", "src/**/*.test.ts"]
+}
