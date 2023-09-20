@@ -5,16 +5,17 @@
     "rootDir": "src",
     "baseUrl": "src",
     "allowJs": true,
-    "outDir": "build/esm",
-    "declaration": true,
-    "declarationDir": "build/types",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "strictNullChecks": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    "types": ["bun-types"],
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "build", "src/**/test.ts"]
+  "exclude": ["node_modules", "build"]
 }
