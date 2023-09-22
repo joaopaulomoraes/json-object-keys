@@ -25,6 +25,7 @@ jobs:
           npm whoami
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Release package
         run: bun run publish
         env:
