@@ -4,18 +4,16 @@
     "module": "esnext",
     "rootDir": "src",
     "baseUrl": "src",
-    "allowJs": true,
+    "declaration": true,
+    "declarationDir": "build/types",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "moduleResolution": "bundler",
-    "strictNullChecks": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "allowImportingTsExtensions": true,
+    "noEmit": false,
     "moduleDetection": "force",
-    "types": ["bun-types"],
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "build"]
+  "exclude": ["node_modules", "build", "src/**/*.test.ts"]
 }

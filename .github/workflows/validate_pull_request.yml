@@ -7,25 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-          cache: "pnpm"
+      - uses: oven-sh/setup-bun@v1
 
       - name: Install
-        run: pnpm install
+        run: bun install
 
       - name: Linting
-        run: pnpm run lint
+        run: bun run lint
 
       - name: Typecheck
-        run: pnpm run typecheck
+        run: bun run typecheck
 
       - name: Test
-        run: pnpm run test:ci
+        run: bun run test:ci
 
       - name: Build
-        run: pnpm run build
+        run: bun run build
