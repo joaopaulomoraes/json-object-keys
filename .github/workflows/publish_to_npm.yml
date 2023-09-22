@@ -12,12 +12,20 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: oven-sh/setup-bun@v1
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+          registry-url: "https://registry.npmjs.org"
+          cache: "pnpm"
 
       - run: bun install
       - run: bun run build
 
       - name: Publish to NPM
-        run: bunx pnpm publish --access public --no-git-checks
+        run: pnpm publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
