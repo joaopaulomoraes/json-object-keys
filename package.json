@@ -40,7 +40,8 @@
     "dev": "bun --watch src/index.ts",
     "test": "bun test",
     "test:watch": "bun --watch test",
-    "test:ci": "bun test"
+    "test:ci": "bun test",
+    "publish": "pnpm publish --access public --no-git-checks"
   },
   "keywords": [
     "json",
