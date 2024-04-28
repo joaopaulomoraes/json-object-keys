@@ -22,13 +22,13 @@ remove(
 Output
 
 ```diff
-+{
-+  id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+  name: 'John Doe',
--  category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+  email: 'john@doe.com',
-+  age: 29
-+}
+{
+  id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+  name: 'John Doe',
+- category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+  email: 'john@doe.com',
+  age: 29
+}
 ```
 
 ```ts
@@ -107,71 +107,71 @@ remove(
 Output
 
 ```diff
-+{
--  id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+  name: 'John Doe',
-+  category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+  email: 'john@doe.com',
-+  age: 29,
-+  node: [
-+    {
+{
+- id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+  name: 'John Doe',
+  category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+  email: 'john@doe.com',
+  age: 29,
+  node: [
+    {
+-    id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+      name: 'John Doe',
+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+      email: 'john@doe.com',
+      age: 29,
+      node: {
 -      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      name: 'John Doe',
-+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+      email: 'john@doe.com',
-+      age: 29,
-+      node: {
+        name: 'John Doe',
+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+        email: 'john@doe.com',
+        age: 29,
+        node: {
 -        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        name: 'John Doe',
-+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+        email: 'john@doe.com',
-+        age: 29,
-+        node: {
--          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+          name: 'John Doe',
-+          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+          email: 'john@doe.com',
-+          age: 29
-+        }
-+      }
-+    },
-+    {
+          name: 'John Doe',
+          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+          email: 'john@doe.com',
+          age: 29
+        }
+      }
+    },
+    {
+-    id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+      name: 'John Doe',
+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+      email: 'john@doe.com',
+      age: 29,
+      node: {
 -      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      name: 'John Doe',
-+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+      email: 'john@doe.com',
-+      age: 29,
-+      node: {
--        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        name: 'John Doe',
-+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+        email: 'john@doe.com',
-+        age: 29
-+      }
-+    },
-+    {
+        name: 'John Doe',
+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+        email: 'john@doe.com',
+        age: 29
+      }
+    },
+    {
+-    id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+      name: 'John Doe',
+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+      email: 'john@doe.com',
+      age: 29,
+      node: {
 -      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      name: 'John Doe',
-+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+      email: 'john@doe.com',
-+      age: 29,
-+      node: {
+        name: 'John Doe',
+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+        email: 'john@doe.com',
+        age: 29,
+        node: {
 -        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        name: 'John Doe',
-+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+        email: 'john@doe.com',
-+        age: 29,
-+        node: {
--          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+          name: 'John Doe',
-+          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+          email: 'john@doe.com',
-+          age: 29
-+        }
-+      }
-+    }
-+  ]
-+}
+          name: 'John Doe',
+          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+          email: 'john@doe.com',
+          age: 29
+        }
+      }
+    }
+  ]
+}
 ```
 
 ### Remove multiple keys
@@ -194,13 +194,13 @@ remove(
 Output
 
 ```diff
-+{
-+  id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+  name: 'John Doe',
--  category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--  email: 'john@doe.com',
-+  age: 29
-+}
+{
+  id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+  name: 'John Doe',
+- category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+- email: 'john@doe.com',
+  age: 29
+}
 ```
 
 ```ts
@@ -279,69 +279,69 @@ remove(
 Output
 
 ```diff
-+{
-+  id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+  name: 'John Doe',
--  category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--  email: 'john@doe.com',
--  age: 29,
-+  node: [
-+    {
-+      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      name: 'John Doe',
--      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--      email: 'john@doe.com',
--      age: 29,
-+      node: {
-+        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        name: 'John Doe',
--        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--        email: 'john@doe.com',
--        age: 29,
-+        node: {
-+          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+          name: 'John Doe',
--          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--          email: 'john@doe.com',
--          age: 29
-+        }
-+      }
-+    },
-+    {
-+      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      name: 'John Doe',
--      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--      email: 'john@doe.com',
--      age: 29,
-+      node: {
-+        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        name: 'John Doe',
--        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--        email: 'john@doe.com',
--        age: 29
-+      }
-+    },
-+    {
-+      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      name: 'John Doe',
--      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--      email: 'john@doe.com',
--      age: 29,
-+      node: {
-+        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        name: 'John Doe',
--        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--        email: 'john@doe.com',
--        age: 29,
-+        node: {
-+          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+          name: 'John Doe',
--          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--          email: 'john@doe.com',
--          age: 29
-+        }
-+      }
-+    }
-+  ]
-+}
+{
+  id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+  name: 'John Doe',
+- category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+- email: 'john@doe.com',
+- age: 29,
+  node: [
+    {
+      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+      name: 'John Doe',
+-     category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+-     email: 'john@doe.com',
+-     age: 29,
+      node: {
+        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+        name: 'John Doe',
+-       category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+-       email: 'john@doe.com',
+-       age: 29,
+        node: {
+          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+          name: 'John Doe',
+-         category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+-         email: 'john@doe.com',
+-         age: 29
+        }
+      }
+    },
+    {
+      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+      name: 'John Doe',
+-     category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+-     email: 'john@doe.com',
+-     age: 29,
+      node: {
+        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+        name: 'John Doe',
+-       category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+-       email: 'john@doe.com',
+-       age: 29
+      }
+    },
+    {
+      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+      name: 'John Doe',
+-     category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+-     email: 'john@doe.com',
+-     age: 29,
+      node: {
+        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+        name: 'John Doe',
+-       category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+-       email: 'john@doe.com',
+-       age: 29,
+        node: {
+          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+          name: 'John Doe',
+-         category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+-         email: 'john@doe.com',
+-         age: 29
+        }
+      }
+    }
+  ]
+}
 ```

@@ -9,6 +9,10 @@ Manage complex object keys in depth.
 - [json-object-keys | ⚠️ WIP ⚠️](#json-object-keys--️-wip-️)
   - [Table of contents](#table-of-contents)
   - [Install](#install)
+    - [Bun](#bun)
+    - [PNPM](#pnpm)
+    - [NPM](#npm)
+    - [Yarn](#yarn)
   - [Remove](#remove)
     - [Remove an unique key](#remove-an-unique-key)
     - [Remove multiple keys](#remove-multiple-keys)
@@ -19,8 +23,28 @@ Manage complex object keys in depth.
 
 ## Install
 
+### Bun
+
+```sh
+bun add json-object-keys
+```
+
+### PNPM
+
+```sh
+pnpm add json-object-keys
+```
+
+### NPM
+
 ```sh
 npm install json-object-keys
+```
+
+### Yarn
+
+```sh
+yarn add json-object-keys
 ```
 
 ## Remove
@@ -46,13 +70,13 @@ remove(
 Output
 
 ```diff
-+{
-+  id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+  name: 'John Doe',
--  category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+  email: 'john@doe.com',
-+  age: 29
-+}
+{
+  id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+  name: 'John Doe',
+- category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+  email: 'john@doe.com',
+  age: 29
+}
 ```
 
 ### Remove multiple keys
@@ -75,13 +99,13 @@ remove(
 Output
 
 ```diff
-+{
-+  id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+  name: 'John Doe',
--  category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
--  email: 'john@doe.com',
-+  age: 29
-+}
+{
+  id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+  name: 'John Doe',
+- category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+- email: 'john@doe.com',
+  age: 29
+}
 ```
 
 ## Replace
@@ -129,20 +153,20 @@ replace(
 Output
 
 ```diff
- {
-+   id: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-    name: 'Grandchild 1',
-+   node: [
-      {
-+       id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-        name: 'Great Grandchild 1'
-      },
-      {
-+       id: 'c579a0b8-c2c7-44e2-a7d9-2edba8f7b472',
-        name: 'Great Grandchild 2'
-      }
-    ]
-  }
+{
++ id: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+  name: 'Grandchild 1',
++ node: [
+    {
++     id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+      name: 'Great Grandchild 1'
+    },
+    {
++     id: 'c579a0b8-c2c7-44e2-a7d9-2edba8f7b472',
+      name: 'Great Grandchild 2'
+    }
+  ]
+}
 ```
 
 ## License

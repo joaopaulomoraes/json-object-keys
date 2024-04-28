@@ -24,14 +24,14 @@ replace(
 Output
 
 ```diff
-+{
-   id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+  uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+  name: 'John Doe',
-+  category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+  email: 'john@doe.com',
-+  age: 29
-+}
+{
+- id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++ uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+  name: 'John Doe',
+  category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+  email: 'john@doe.com',
+  age: 29
+}
 ```
 
 ```ts
@@ -112,81 +112,80 @@ replace(
 Output
 
 ```diff
-+{
-   id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+  uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+  uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+  name: 'John Doe',
-+  category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+  email: 'john@doe.com',
-+  age: 29,
-+  node: [
-+    {
-       id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      name: 'John Doe',
-+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+      email: 'john@doe.com',
-+      age: 29,
-+      node: {
-         id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+{
+- id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++ uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+  name: 'John Doe',
+  category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+  email: 'john@doe.com',
+  age: 29,
+  node: [
+    {
+-     id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++     uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+      name: 'John Doe',
+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+      email: 'john@doe.com',
+      age: 29,
+      node: {
+-       id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++       uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+        name: 'John Doe',
+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+        email: 'john@doe.com',
+        age: 29,
+        node: {
+-         id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
 +        uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        name: 'John Doe',
-+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+        email: 'john@doe.com',
-+        age: 29,
-+        node: {
-           id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+          uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+          name: 'John Doe',
-+          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+          email: 'john@doe.com',
-+          age: 29
-+        }
-+      }
-+    },
-+    {
-       id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      name: 'John Doe',
-+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+      email: 'john@doe.com',
-+      age: 29,
-+      node: {
-         id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        name: 'John Doe',
-+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+        email: 'john@doe.com',
-+        age: 29
-+      }
-+    },
-+    {
-       id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      name: 'John Doe',
-+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+      email: 'john@doe.com',
-+      age: 29,
-+      node: {
-         id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        name: 'John Doe',
-+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+        email: 'john@doe.com',
-+        age: 29,
-+        node: {
-           id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+          uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+          name: 'John Doe',
-+          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+          email: 'john@doe.com',
-+          age: 29
-+        }
-+      }
-+    }
-+  ]
-+}
+          name: 'John Doe',
+          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+          email: 'john@doe.com',
+          age: 29
+        }
+      }
+    },
+    {
+-     id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++     uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+      name: 'John Doe',
+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+      email: 'john@doe.com',
+      age: 29,
+      node: {
+-       id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++       uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+        name: 'John Doe',
+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+        email: 'john@doe.com',
+        age: 29
+      }
+    },
+    {
+-     id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++     uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+      name: 'John Doe',
+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+      email: 'john@doe.com',
+      age: 29,
+      node: {
+-       id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++       uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+        name: 'John Doe',
+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+        email: 'john@doe.com',
+        age: 29,
+        node: {
+-         id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++         uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+          name: 'John Doe',
+          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+          email: 'john@doe.com',
+          age: 29
+        }
+      }
+    }
+  ]
+}
 ```
 
 ### Replace multiple keys
@@ -212,15 +211,15 @@ replace(
 Output
 
 ```diff
-+{
-   id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+  uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+  name: 'John Doe',
-   category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+  tag: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+  email: 'john@doe.com',
-+  age: 29
-+}
+{
+- id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++ uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+  name: 'John Doe',
+- category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
++ tag: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+  email: 'john@doe.com',
+  age: 29
+}
 ```
 
 ```ts
@@ -295,7 +294,7 @@ replace(
   {
     id: 'uuid',
     node: 'children',
-    name: 'firstName'
+    name: 'fullName'
   }
 )
 ```
@@ -303,69 +302,93 @@ replace(
 Output
 
 ```diff
-+{
-+  id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+  firstName: 'John Doe',
-   category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-   email: 'john@doe.com',
-   age: 29,
-+  children: [
-+    {
-+      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      firstName: 'John Doe',
-       category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-       email: 'john@doe.com',
-       age: 29,
-+      children: {
-+        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        firstName: 'John Doe',
-         category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-         email: 'john@doe.com',
-         age: 29,
-+        children: {
-+          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+          firstName: 'John Doe',
-           category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-           email: 'john@doe.com',
-           age: 29
-+        }
-+      }
-+    },
-+    {
-+      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      firstName: 'John Doe',
-+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+      email: 'john@doe.com',
-+      age: 29,
-+      children: {
-+        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        firstName: 'John Doe',
-+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-+        email: 'john@doe.com',
-+        age: 29
-+      }
-+    },
-+    {
-+      id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+      firstName: 'John Doe',
-       category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-       email: 'john@doe.com',
-       age: 29,
-+      children: {
-+        id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+        firstName: 'John Doe',
-         category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-         email: 'john@doe.com',
-         age: 29,
-+        children: {
-+          id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
-+          firstName: 'John Doe',
-           category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
-           email: 'john@doe.com',
-           age: 29
-+        }
-+      }
-+    }
-+  ]
-+}
+{
+- id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++ uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+- name: 'John Doe',
++ fullName: 'John Doe',
+  category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+  email: 'john@doe.com',
+  age: 29,
+- node: [
++ children: [
+    {
+-     id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++     uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+-     name: 'John Doe',
++     fullName: 'John Doe',
+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+      email: 'john@doe.com',
+      age: 29,
+-     node: {
++     children: {
+-       id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++       uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+-       name: 'John Doe',
++       fullName: 'John Doe',
+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+        email: 'john@doe.com',
+        age: 29,
+-       node: {
++       children: {
+-         id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++         uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+-         name: 'John Doe',
++         fullName: 'John Doe',
+          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+          email: 'john@doe.com',
+          age: 29
+        }
+      }
+    },
+    {
+-     id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++     uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+-     name: 'John Doe',
++     fullName: 'John Doe',
+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+      email: 'john@doe.com',
+      age: 29,
+-     node: {
++     children: {
+-       id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++       uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+-       name: 'John Doe',
++       fullName: 'John Doe',
+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+        email: 'john@doe.com',
+        age: 29
+      }
+    },
+    {
+-     id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++     uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+-     name: 'John Doe',
++     fullName: 'John Doe',
+      category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+      email: 'john@doe.com',
+      age: 29,
+-     node: {
++     children: {
+-       id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++       uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+-       name: 'John Doe',
++       fullName: 'John Doe',
+        category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+        email: 'john@doe.com',
+        age: 29,
+-       node: {
++       children: {
+-         id: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
++         uuid: 'e059d01a-7082-4b63-9c70-997491cdcf7c',
+-         name: 'John Doe',
++         fullName: 'John Doe',
+          category: '65bf5579-710d-4f56-9907-8c0bb1b2f0d2',
+          email: 'john@doe.com',
+          age: 29
+        }
+      }
+    }
+  ]
+}
 ```
