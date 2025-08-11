@@ -1,5 +1,5 @@
 type JSObject = {
-  [key: string | number | symbol]: unknown
+  [key: PropertyKey]: unknown
 }
 
 /**

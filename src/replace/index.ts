@@ -1,5 +1,5 @@
 type JSObject = {
-  [key: string | number | symbol]: unknown
+  [key: PropertyKey]: unknown
 }
 
 type Replace<O extends JSObject, R extends Readonly<{ [T in keyof O]?: keyof O }>> = {
